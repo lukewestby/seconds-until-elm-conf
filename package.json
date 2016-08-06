@@ -1,0 +1,14 @@
+{
+  "name": "seconds-until-elm-conf-2016",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:js": "elm-make ./src/Main.elm --output ./build/main.js",
+    "build:css": "elm-css ./src/Stylesheets.elm --output ./build/",
+    "build": "npm run build:js && npm run build:css",
+    "watch": "nodemon --exec \"npm run build\" -e elm"
+  },
+  "author": "",
+  "license": "ISC"
+}
