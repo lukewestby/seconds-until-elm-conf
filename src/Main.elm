@@ -3,6 +3,7 @@ module Main exposing (..)
 import Date
 import Time exposing (Time)
 import Html exposing (..)
+import Html.Attributes exposing (..)
 import Html.App as Html
 import Html.CssHelpers
 
@@ -60,7 +61,11 @@ view model =
     else if model > elmConfEndTime then
         div [] [ text "Elm Conf already happened :( See you next year!" ]
     else
-        div [] [ text <| (toString (round ((elmConfStartTime - model) / Time.second))) ++ " seconds till Elm Conf!" ]
+        div []
+            [ text <| (toString (round ((elmConfStartTime - model) / Time.second))) ++ " seconds till "
+            , a [ href "http://elm-conf.us" ] [ text "Elm Conf" ]
+            , text "!"
+            ]
 
 
 main : Program { now : Time }
