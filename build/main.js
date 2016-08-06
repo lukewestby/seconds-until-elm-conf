@@ -8581,7 +8581,18 @@ var _user$project$Main$view = function (model) {
 					_elm_lang$core$Basics_ops['++'],
 					_elm_lang$core$Basics$toString(
 						_elm_lang$core$Basics$round((_user$project$Main$elmConfStartTime - model) / _elm_lang$core$Time$second)),
-					' seconds till Elm Conf!'))
+					' seconds till ')),
+				A2(
+				_elm_lang$html$Html$a,
+				_elm_lang$core$Native_List.fromArray(
+					[
+						_elm_lang$html$Html_Attributes$href('http://elm-conf.us')
+					]),
+				_elm_lang$core$Native_List.fromArray(
+					[
+						_elm_lang$html$Html$text('Elm Conf')
+					])),
+				_elm_lang$html$Html$text('!')
 			])));
 };
 var _user$project$Main$Tick = function (a) {
